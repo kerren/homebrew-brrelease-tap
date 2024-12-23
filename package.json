@@ -4,7 +4,8 @@
   "description": "The Homebrew Formula for the brrelease CLI",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-formula": "ts-node scripts/generate-formula.ts"
   },
   "keywords": [
     "homebrew",
@@ -14,5 +15,13 @@
     "brrelease"
   ],
   "author": "Kerren Ortlepp",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "handlebars": "^4.7.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "prettier": "^3.4.2",
+    "ts-node": "^10.9.2"
+  }
 }
