@@ -1,0 +1,18 @@
+{
+  "name": "homebrew-brrelease-tap",
+  "version": "1.0.0",
+  "description": "The Homebrew Formula for the brrelease CLI",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "homebrew",
+    "tap",
+    "formula",
+    "cli",
+    "brrelease"
+  ],
+  "author": "Kerren Ortlepp",
+  "license": "MIT"
+}
