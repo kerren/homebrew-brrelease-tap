@@ -28,9 +28,6 @@ class Brrelease < Formula
     inreplace "bin/brrelease", /^CLIENT_HOME=/, "export BRRELEASE_OCLIF_CLIENT_HOME=#{lib/"client"}\nCLIENT_HOME="
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/brrelease"
-
-    bash_completion.install libexec/"autocomplete-scripts/brew/bash" => "brrelease"
-    zsh_completion.install libexec/"autocomplete-scripts/brew/zsh/_brrelease"
   end
 
   def caveats; <<~EOS
