@@ -29,10 +29,10 @@ export async function run() {
     console.log(`  [+] path to build directory ${buildDirectory}`);
 
     const [darwin_x64_hash, darwin_arm64_hash, linux_x64_hash, linux_arm64_hash] = await Promise.all([
-        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-darwin-x64.tar.xz`)),
-        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-darwin-arm64.tar.xz`)),
-        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-linux-x64.tar.xz`)),
-        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-linux-arm64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-v${version}-${identifier}-darwin-x64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-v${version}-${identifier}-darwin-arm64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-v${version}-${identifier}-linux-x64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-v${version}-${identifier}-linux-arm64.tar.xz`)),
     ]);
 
     const formulaTemplate = handlebars.compile(FormulaTemplate);

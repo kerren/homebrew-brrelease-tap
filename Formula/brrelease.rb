@@ -2,7 +2,7 @@ class Brrelease < Formula
   desc "Install script for the brrelease CLI"
   homepage "https://github.com/kerren/brrelease"
   url "https://github.com/kerren/brrelease/releases/download/v1.10.2/brrelease-v1.10.2-fd11b4a-darwin-x64.tar.xz"
-  version "v1.10.2"
+  version "1.10.2"
   sha256 "6229ff6e8f84d737c16ed5162533e2814be07c589a4da5eb6295ac30f3fb8835"
   version_scheme 1
 

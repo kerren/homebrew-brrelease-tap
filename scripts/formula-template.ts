@@ -1,25 +1,25 @@
 export const FormulaTemplate = `class Brrelease < Formula
   desc "Install script for the brrelease CLI"
   homepage "https://github.com/kerren/brrelease"
-  url "https://github.com/kerren/brrelease/releases/download/{{version}}/brrelease-{{version}}-{{identifier}}-darwin-x64.tar.xz"
+  url "https://github.com/kerren/brrelease/releases/download/v{{version}}/brrelease-v{{version}}-{{identifier}}-darwin-x64.tar.xz"
   version "{{version}}"
   sha256 "{{darwin_x64_hash}}"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://github.com/kerren/brrelease/releases/download/{{version}}/brrelease-{{version}}-{{identifier}}-darwin-arm64.tar.xz"
+      url "https://github.com/kerren/brrelease/releases/download/v{{version}}/brrelease-v{{version}}-{{identifier}}-darwin-arm64.tar.xz"
       sha256 "{{darwin_arm64_hash}}"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/kerren/brrelease/releases/download/{{version}}/brrelease-{{version}}-{{identifier}}-linux-x64.tar.xz"
+      url "https://github.com/kerren/brrelease/releases/download/v{{version}}/brrelease-v{{version}}-{{identifier}}-linux-x64.tar.xz"
       sha256 "{{linux_x64_hash}}"
     end
     on_arm do
-      url "https://github.com/kerren/brrelease/releases/download/{{version}}/brrelease-{{version}}-{{identifier}}-linux-arm64.tar.xz"
+      url "https://github.com/kerren/brrelease/releases/download/v{{version}}/brrelease-v{{version}}-{{identifier}}-linux-arm64.tar.xz"
       sha256 "{{linux_arm64_hash}}"
     end
   end

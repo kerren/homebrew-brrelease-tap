@@ -16,3 +16,12 @@ brew "<formula>"
 ## Documentation
 
 `brew help`, `man brew` or check [Homebrew's documentation](https://docs.brew.sh).
+
+
+## Generating a template
+
+I've created a script to generate the Homebrew Formula, an example would be:
+
+```shell
+pnpm generate-formula --version=1.10.2 --identifier=fd11b4a --build-directory=/tmp/brrelease/dist
+```
