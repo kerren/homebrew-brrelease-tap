@@ -1,5 +1,9 @@
 import * as handlebars from 'handlebars';
 import process from 'node:process';
+import * as path from 'node:path';
+import { getHash } from './hash-file';
+import { FormulaTemplate } from './formula-template';
+import * as fs from 'fs/promises';
 
 export async function run() {
     const versionArg = process.argv.find((arg) => arg.includes('--version='));
@@ -23,6 +27,28 @@ export async function run() {
     console.log(`  [+] version ${version}`);
     console.log(`  [+] identifier ${identifier}`);
     console.log(`  [+] path to build directory ${buildDirectory}`);
+
+    const [darwin_x64_hash, darwin_arm64_hash, linux_x64_hash, linux_arm64_hash] = await Promise.all([
+        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-darwin-x64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-darwin-arm64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-linux-x64.tar.xz`)),
+        getHash(path.join(buildDirectory, `brrelease-${version}-${identifier}-linux-arm64.tar.xz`)),
+    ]);
+
+    const formulaTemplate = handlebars.compile(FormulaTemplate);
+    const formula = formulaTemplate({
+        version,
+        identifier,
+        darwin_x64_hash,
+        darwin_arm64_hash,
+        linux_x64_hash,
+        linux_arm64_hash,
+    });
+
+    const formulaPath = path.resolve('./', 'Formula', 'brrelease.rb');
+    await fs.writeFile(formulaPath, formula);
+
+    console.log(`  [+] Successfully updated ${formulaPath}`);
 }
 
 run()

@@ -1,5 +1,4 @@
-export const FormulaTemplate = `
-class Brrelease < Formula
+export const FormulaTemplate = `class Brrelease < Formula
   desc "Install script for the brrelease CLI"
   homepage "https://github.com/kerren/brrelease"
   url "https://github.com/kerren/brrelease/releases/download/{{version}}/brrelease-{{version}}-{{identifier}}-darwin-x64.tar.xz"
