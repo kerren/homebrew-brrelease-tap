@@ -1,10 +1,23 @@
 # brrelease homebrew tap
 
+## One step install
+
+```shell
+brew install kerren/brrelease-tap/brrelease
+```
+
 ## How do I install these formulae?
 
-`brew install kerren/brrelease-tap/<formula>`
+```shell
+brew install kerren/brrelease-tap/<formula>
+```
 
-Or `brew tap kerren/brrelease-tap` and then `brew install <formula>`.
+Or,
+```shell
+brew tap kerren/brrelease-tap
+brew install <formula>
+```
+
 
 Or, in a [`brew bundle`](https://github.com/Homebrew/homebrew-bundle) `Brewfile`:
 
