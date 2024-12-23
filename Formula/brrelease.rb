@@ -16,11 +16,11 @@ class Brrelease < Formula
   on_linux do
     on_intel do
       url "https://github.com/kerren/brrelease/releases/download/v1.8.3/brrelease-v1.8.3-93401e0-linux-x64.tar.xz"
-      sha256 "290d3b00d84bb0e461a9109f1893f32dea78c88e0d35e0e1dc93a816a19aa91d"
+      sha256 "8b27c0c02f0599c2200811185733d6360f4c4c28b48628af461b1da3ac7b8d90"
     end
     on_arm do
-      url "https://github.com/kerren/brrelease/releases/download/v1.8.3/brrelease-v1.8.3-93401e0-linux-arm.tar.xz"
-      sha256 "290d3b00d84bb0e461a9109f1893f32dea78c88e0d35e0e1dc93a816a19aa91d"
+      url "https://github.com/kerren/brrelease/releases/download/v1.8.3/brrelease-v1.8.3-93401e0-linux-arm64.tar.xz"
+      sha256 "ceed1f3d23ca3737c25a52ce1c9a07c53ec2a26b76e8395dea438ab8fc77817f"
     end
   end
 
