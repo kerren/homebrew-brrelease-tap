@@ -1,10 +1,10 @@
 export const FormulaTemplate = `
 class Brrelease < Formula
-  desc "The install scripts for brrelease"
+  desc "Install script for the brrelease CLI"
   homepage "https://github.com/kerren/brrelease"
   url "https://github.com/kerren/brrelease/releases/download/{{version}}/brrelease-{{version}}-{{identifier}}-darwin-x64.tar.xz"
-  sha256 "{{darwin_x64_hash}}"
   version "1.9.0"
+  sha256 "{{darwin_x64_hash}}"
   version_scheme 1
 
   on_macos do
@@ -29,21 +29,6 @@ class Brrelease < Formula
     inreplace "bin/brrelease", /^CLIENT_HOME=/, "export BRRELEASE_OCLIF_CLIENT_HOME=#{lib/"client"}\\nCLIENT_HOME="
     libexec.install Dir["*"]
     bin.install_symlink libexec/"bin/brrelease"
-  end
-
-  def caveats; <<~EOS
-    To use the brrelease CLI's autocomplete --
-      Via homebrew's shell completion:
-        1) Follow homebrew's install instructions https://docs.brew.sh/Shell-Completion
-            NOTE: For zsh, as the instructions mention, be sure compinit is autoloaded
-                  and called, either explicitly or via a framework like oh-my-zsh.
-        2) Then run
-          $ brrelease autocomplete --refresh-cache
-      OR
-      Use our standalone setup:
-        1) Run and follow the install steps:
-          $ brrelease autocomplete
-  EOS
   end
 
   test do
