@@ -1,4 +1,4 @@
-# Kerren Brrelease-tap
+# brrelease homebrew tap
 
 ## How do I install these formulae?
 
