@@ -1,26 +1,26 @@
 class Brrelease < Formula
   desc "Install script for the brrelease CLI"
   homepage "https://github.com/kerren/brrelease"
-  url "https://github.com/kerren/brrelease/releases/download/v1.14.0/brrelease-v1.14.0-677383a-darwin-x64.tar.xz"
-  version "1.14.0"
-  sha256 "231cf672eca7e82d47c464f20772cf6aaf5a24806213ddb19eba5493b04d56dc"
+  url "https://github.com/kerren/brrelease/releases/download/v1.14.3/brrelease-v1.14.3-f5c6244-darwin-x64.tar.xz"
+  version "1.14.3"
+  sha256 "5e6162aa9d378d0d4149d87dafa88a437562708964c0cfbda9650f2b1b348836"
   version_scheme 1
 
   on_macos do
     on_arm do
-      url "https://github.com/kerren/brrelease/releases/download/v1.14.0/brrelease-v1.14.0-677383a-darwin-arm64.tar.xz"
-      sha256 "2d30732dc3af4e58ab690f5d0d64244bd9ce08a0f15f0f5e393cfaaf5508ab41"
+      url "https://github.com/kerren/brrelease/releases/download/v1.14.3/brrelease-v1.14.3-f5c6244-darwin-arm64.tar.xz"
+      sha256 "eccc8ae19c1295c3dcc665b26bb7142d3decab6d5e3722c5c53ca79cd3f0830b"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/kerren/brrelease/releases/download/v1.14.0/brrelease-v1.14.0-677383a-linux-x64.tar.xz"
-      sha256 "7f6f4770cf8e5129bde5e707072cfa208082c47ccfc110319cd40bb4a387ed6c"
+      url "https://github.com/kerren/brrelease/releases/download/v1.14.3/brrelease-v1.14.3-f5c6244-linux-x64.tar.xz"
+      sha256 "8a66675e46c5406b4cb65543cb00398b76124156c998dfc83f409bf06bd55ab5"
     end
     on_arm do
-      url "https://github.com/kerren/brrelease/releases/download/v1.14.0/brrelease-v1.14.0-677383a-linux-arm64.tar.xz"
-      sha256 "b1aca85b5be3bc1e2cf978cfbf2269868a4ae418309f2767b9d5351b80179b35"
+      url "https://github.com/kerren/brrelease/releases/download/v1.14.3/brrelease-v1.14.3-f5c6244-linux-arm64.tar.xz"
+      sha256 "d5fd0ee2786ccf59044ffcbfa5735b0218b08d1acc96b062789533ec15d21d78"
     end
   end
 
